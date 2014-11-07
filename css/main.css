@@ -104,18 +104,28 @@ textarea {
 #image {
   margin: 0 auto;
   width: 1145px;
+  height: 803px;
+  background-image: url('../bijles.png');
 }
 
 #text {
   margin: 0 auto;
-  width: 600px;
+  max-width: 50em;
 }
 
-.show {
-  display: block;
-}
 .hide {
   display: none;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+footer > div {
+  margin: 0 auto;
+  width: 1145px;
 }
 
 
