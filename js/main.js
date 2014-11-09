@@ -8,13 +8,17 @@
     $('#toVisual').on('click', toVisual);
 
     function toText() {
-      $('#image').addClass('hide');
+      $('#visual').addClass('hide');
+      $('#toText').addClass('hide');
       $('#text').removeClass('hide');
+      $('#toVisual').removeClass('hide');
     }
 
     function toVisual() {
       $('#text').addClass('hide');
-      $('#image').removeClass('hide');
+      $('#toVisual').addClass('hide');
+      $('#visual').removeClass('hide');
+      $('#toText').removeClass('hide');
     }
   }
 
