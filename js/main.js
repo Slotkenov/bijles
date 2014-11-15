@@ -4,6 +4,7 @@
   $(document).ready(init)
 
   function init() {
+    $('#toTextLink').on('click', toggleText);
     $('#toText').on('click', toText);
     $('#toVisual').on('click', toVisual);
 
@@ -12,6 +13,18 @@
       $('#toText').addClass('hide');
       $('#text').removeClass('hide');
       $('#toVisual').removeClass('hide');
+    }
+
+    function toggleText() {
+      if ($('#toTextItem').hasClass('active')) {
+        $('#text').addClass('hide');
+        $('#toTextItem').removeClass('active');
+        $('#visual').removeClass('hide');
+      } else {
+        $('#visual').addClass('hide');
+        $('#toTextItem').addClass('active');
+        $('#text').removeClass('hide');
+      }
     }
 
     function toVisual() {
