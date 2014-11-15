@@ -8,30 +8,28 @@
     $('#toText').on('click', toText);
     $('#toVisual').on('click', toVisual);
 
-    function toText() {
-      $('#visual').addClass('hide');
-      $('#toText').addClass('hide');
-      $('#text').removeClass('hide');
-      $('#toVisual').removeClass('hide');
-    }
-
     function toggleText() {
       if ($('#toTextItem').hasClass('active')) {
-        $('#text').addClass('hide');
-        $('#toTextItem').removeClass('active');
-        $('#visual').removeClass('hide');
+        toVisual();
       } else {
-        $('#visual').addClass('hide');
-        $('#toTextItem').addClass('active');
-        $('#text').removeClass('hide');
+        toText();
       }
+    }
+
+    function toText() {
+      $('#visual').addClass('hide');
+      $('#toTextItem').addClass('active');
+      $('#toText').addClass('hide');
+      $('#toVisual').removeClass('hide');
+      $('#text').removeClass('hide');
     }
 
     function toVisual() {
       $('#text').addClass('hide');
+      $('#toTextItem').removeClass('active');
       $('#toVisual').addClass('hide');
-      $('#visual').removeClass('hide');
       $('#toText').removeClass('hide');
+      $('#visual').removeClass('hide');
     }
   }
 
